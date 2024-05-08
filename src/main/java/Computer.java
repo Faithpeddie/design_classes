@@ -10,7 +10,7 @@ public class Computer {
 
     public Computer (int storageSpace) {
         this.storageSpace = storageSpace;
-        this.printerModel = "Zero";
+        this.printerModel = "None";
     }
 
     //behaviour (first method)
@@ -18,8 +18,14 @@ public class Computer {
         this.storageSpace += addStorage;
     }
     
-    //behaviour (first method)
-
+    //behaviour (second method)
+    public void printMessage(){
+        if (printerModel.equals("None")){
+            System.out.println("No printer connected.");
+        } else {
+            System.out.println("Hello World!");
+        }
+    }
 
     //getter
     public int getStorageSpace() {
